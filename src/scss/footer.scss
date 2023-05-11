@@ -1,7 +1,8 @@
 //====================================================================================================
 .footer {
     padding: 100px 0px;
-    background-color: $grey;
+    background-color: #191F2C;
+    ;
     position: relative;
     z-index: -1;
     // .footer__container
@@ -48,7 +49,7 @@
 
     // .footer__order
     &__order {
-        background-color: $green;
+        background-color: $accent;
         padding: 10px 15px;
         display: inline-flex;
         border-radius: 8px;

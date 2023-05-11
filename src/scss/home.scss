@@ -6,6 +6,7 @@
     min-height: 700px;
     background: rgb(255, 255, 255);
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 48%, rgba(0, 212, 255, 0) 62%);
+    margin-top: 100px;
     // .utp__container
 
     &__container {
@@ -58,6 +59,10 @@
         font-weight: 700;
         font-size: 72px;
         line-height: 103%;
+
+        span {
+            // font-family: 'Comforter', cursive;
+        }
     }
 
     // .utp__subtitle
@@ -66,6 +71,7 @@
         font-weight: 500;
         font-size: 36px;
         line-height: 161%;
+        // font-family: 'Comforter', cursive;
     }
 
     // .utp__call
@@ -83,6 +89,10 @@
         color: $white;
         font-weight: 500;
         font-size: 24px;
+
+        &:hover {
+            background-color: $mainColor;
+        }
     }
 }
 
@@ -145,11 +155,16 @@
         color: $white;
         font-weight: 500;
         font-size: 24px;
+
+        &:hover {
+            background-color: $mainColor;
+        }
     }
 }
 
 .pizza-menu {
     padding: 40px 0px;
+    margin-bottom: 50px;
 
 
     // .menu__title
@@ -164,14 +179,12 @@
 
     // .menu__slider
 
-    &__slider {
-        margin-bottom: 50px;
-    }
+    &__slider {}
 
     // .menu__wrapper
 
     &__wrapper {
-        height: 100% !important;
+        padding-bottom: 50px;
     }
 
     // .menu__slide
@@ -254,13 +267,40 @@
 
         i {
             transform: rotate(45deg);
-            font-size: 25px;
-            color: $accent;
+            font-size: 20px;
+            color: $mainColor;
+            border: 2px solid #ECEEF7;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                border-color: rgba($color: $mainColor, $alpha: .6);
+                color: $accent;
+            }
         }
+
+
     }
 
     .swiper {
         overflow: visible !important;
+    }
+
+    .swiper-scrollbar {
+        width: 100%;
+        height: 10px;
+        // background-color: rgba($color: $mainColor, $alpha: .1);
+    }
+
+    .swiper-scrollbar-drag {
+        background: #DEDEDE;
+        border-radius: 10px;
+        // width: 20%;
+        height: 100%;
     }
 
     // .swiper-wrapper {}
@@ -272,146 +312,95 @@
     // .fa-vk {}
 }
 
+.reviews {
+    padding: 60px 0px;
+
+    // .reviews__container
+    &__container {}
+
+    // .reviews__body
+    &__body {
+        display: flex;
+        align-items: center;
+        min-width: 0;
+    }
+
+    // .reviews__image
+    &__image {
+        img {
+            border-radius: 25px 0px 0px 25px;
+            height: 100%;
+        }
+    }
+
+    // .reviews__col
+    &__col {
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+        background-color: rgba($color: $mainColor, $alpha: .1);
+        border-radius: 0px 25px 25px 0px;
 
 
+        @media screen and (min-width: 769px) {
+            // margin-left: 30px;
+        }
+    }
+
+    // .reviews__card
+    &__card {
+        border-bottom: 1px solid rgba($color: $mainColor, $alpha: .1);
+        padding: 10px 0px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    // .reviews__star
+    &__star {
+        margin-bottom: 10px;
+
+        img {
+            width: 15px;
+
+            &:not(:last-child) {
+                margin-right: 7px;
+            }
+        }
+    }
+
+    // .reviews__text
+    &__text {
+        font-size: 18px;
+        margin-bottom: 20px;
+        line-height: 140%;
+
+        @media screen and (min-width: 769px) {
+            // max-width: 70%;
+        }
+    }
+
+    // .reviews__bottom
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .reviews__name
+    &__name {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    // .reviews__date
+    &__date {
+        font-size: 14px;
+    }
+
+}
 
 
-// .pizza-menu {
-//     padding: 100px 0px;
-//     background-color: $lightYellow;
-
-//     // .pizza-menu__container
-
-//     &__container {}
-
-//     // .pizza-menu__title
-//     &__title {
-//         font-size: 30px;
-//         font-weight: 900;
-//         text-transform: uppercase;
-//         text-align: center;
-//         padding-bottom: 20px;
-//         position: relative;
-//     }
-
-//     // .pizza-menu__text
-//     &__text {
-//         font-size: 20px;
-//         text-align: center;
-//         margin-bottom: 40px;
-//     }
-
-//     // .pizza-menu__body
-
-//     &__body {
-//         display: grid;
-//         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-//         gap: 30px;
-//     }
-
-//     // .pizza-menu__card
-
-//     &__card {
-//         border: 1px solid rgba($color: $green, $alpha: .2);
-//         border-radius: 8px;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         text-align: center;
-//         padding: 20px;
-
-//         &:hover {
-//             border: 1px solid rgba($color: $green, $alpha: 1);
-
-//             .pizza-menu__image {
-//                 img {
-//                     transform: rotate(-35deg);
-//                 }
-//             }
-//         }
-//     }
-
-//     // .pizza-menu__image
-
-//     &__image {
-//         width: 200px;
-//         height: 200px;
-//         margin-bottom: 30px;
-
-//         img {
-//             max-width: 100%;
-//             transition: transform .3s ease 0s;
-//         }
-//     }
-
-//     // .pizza-menu__content
-
-//     &__content {}
-
-//     // .pizza-menu__name
-
-//     &__name {
-//         font-size: 30px;
-//         margin-bottom: 20px;
-
-
-//         span {
-//             color: $red;
-//             // font-family: $cursive;
-//         }
-//     }
-
-//     // .pizza-menu__compound
-
-//     &__compound {
-//         margin-bottom: 10px;
-//     }
-
-//     // .pizza-menu__price
-
-//     &__price {
-//         display: flex;
-//         align-items: center;
-//         margin-bottom: 10px;
-
-//         p {
-//             flex: 1 1 auto;
-//             text-align: left;
-//         }
-
-//         b {
-//             font-weight: 800;
-//         }
-//     }
-
-//     // .pizza-menu__link
-
-//     &__link {
-//         width: 100%;
-//         height: 40px;
-//         background-color: $red;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         border-radius: 8px;
-//         margin-top: 20px;
-//         color: $white;
-//         font-weight: 700;
-//         transition: background-color .3s ease 0s;
-
-//         &:hover {
-//             background-color: rgba($color: $red, $alpha: .8);
-//         }
-//     }
-// }
-
-// .ymaps-layers-pane {
-//     // filter: brightness(50%);
-//     // -ms-filter: brightness(50%);
-//     // -webkit-filter: brightness(50%);
-//     // -moz-filter: brightness(50%);
-//     // -o-filter: brightness(50%);
-// }
 
 .map {
     position: relative;
@@ -516,7 +505,7 @@
 
     // .map__social--delivery
     &__social--delivery {
-        background-color: $mainColor;
+        background-color: $accent;
         color: $white;
         padding: 0px 20px 0px;
         height: 50px;

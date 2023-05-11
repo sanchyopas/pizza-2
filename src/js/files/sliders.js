@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination, Scrollbar } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -32,17 +32,17 @@ function initSliders() {
 		new Swiper('.swiper', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Navigation, Scrollbar],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 5.5,
 			spaceBetween: 40,
-			autoHeight: false,
+			autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			// loop: true,
 			//preloadImages: false,
 			//lazy: true,
 
@@ -64,12 +64,12 @@ function initSliders() {
 			*/
 
 			// Скроллбар
-			/*
+
 			scrollbar: {
 				el: '.swiper-scrollbar',
 				draggable: true,
 			},
-			*/
+
 
 			// Кнопки "влево/вправо"
 			navigation: {
@@ -105,7 +105,10 @@ function initSliders() {
 			}
 		});
 	}
+
+
 }
+
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
