@@ -418,10 +418,15 @@ export function menuInit() {
 			if (bodyLockStatus && e.target.closest('.icon-menu')) {
 				bodyLockToggle();
 				document.documentElement.classList.toggle("menu-open");
+				document.querySelector('.icon-menu').classList.toggle('active')
+				document.querySelector('.menu__body').classList.toggle('active')
 			}
 		});
 	};
 }
+
+// document.querySelector('.icon-menu').addEventListener('click', menuOpen)
+
 export function menuOpen() {
 	bodyLock();
 	document.documentElement.classList.add("menu-open");

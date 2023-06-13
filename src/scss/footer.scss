@@ -2,9 +2,7 @@
 .footer {
     padding: 100px 0px;
     background-color: #191F2C;
-    ;
     position: relative;
-    z-index: -1;
     // .footer__container
 
     &__container {}
@@ -54,6 +52,23 @@
         display: inline-flex;
         border-radius: 8px;
 
+    }
+}
+
+.author{
+    background-color: $accent;
+    padding: 20px 0px;
+
+    &__container{}
+
+    &__body{
+        text-align: center;
+        color: #ffffff;
+
+        a{
+            font-weight: 600;
+            text-decoration: underline;
+        }
     }
 }
 

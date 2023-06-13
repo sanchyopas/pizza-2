@@ -4,20 +4,17 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 // Плавная прокрутка к элементу
-
+window.ResizeObserver = undefined;
 
 const anchorLink = document.querySelectorAll('[data-goto]');
-
-console.log(anchorLink);
-
 if (anchorLink.length > 0) {
     anchorLink.forEach(link => {
         link.addEventListener('click', onMenuLinkClick);
     })
 
     function onMenuLinkClick(e) {
-        console.log(e.target);
         let menuLink = e.target;
+        e.preventDefault();
 
         if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
             const gotoBlock = document.querySelector(menuLink.dataset.goto);
@@ -28,7 +25,6 @@ if (anchorLink.length > 0) {
                 behavior: 'smooth'
             })
 
-            e.preventDefault();
         }
     }
 }

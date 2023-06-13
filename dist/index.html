@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/_head.htm',{
-"title":"Главная"
-})
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230608153202" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comforter&family=Delicious+Handrawn&family=Inter&family=Josefin+Sans:ital@1&family=Manrope:wght@500;700;800&display=swap&_v=20230608153202" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230608153202">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
+		<header class="header">
+			<div class="header__container">
+				<div class="header__body">
+					<a href="#utp" class="header__logo">
+						<picture><source srcset="img/logo-red.webp" type="image/webp"><img src="img/logo-red.png" alt=""></picture>
+						<span>смак</span>
+					</a>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="#about" class="menu__link">О нас</a></li>
+								<li class="menu__item"><a href="#menu" class="menu__link">Меню</a></li>
+								<li class="menu__item"><a href="#reviews" class="menu__link">Отзывы</a></li>
+								<li class="menu__item"><a href="#contact" class="menu__link">Контакты</a></li>
+								<li class="menu__item"><a href="tel:+79220468874" class="menu__link menu__link--btn">Заказать</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
 		<main class="page" id="top">
 			<!-- <button type="button" class="arrow-top" data-goto="#top">
-				<img src="@img/arrow-down.svg" alt="" data-goto="#top">
+				<img src="img/arrow-down.svg" alt="" data-goto="#top">
 			</button> -->
 			<div class="utp" id="utp">
-				<img src="@img/list.png" alt="" class="utp__list">
-				<img src="@img/pomidor.png" alt="" class="utp__pomidor">
-				<img src="@img/margherita-pizza.png" alt="" class="utp__bg">
+				<picture><source srcset="img/list.webp" type="image/webp"><img src="img/list.png" alt="" class="utp__list"></picture>
+				<picture><source srcset="img/pomidor.webp" type="image/webp"><img src="img/pomidor.png" alt="" class="utp__pomidor"></picture>
+				<picture><source srcset="img/margherita-pizza.webp" type="image/webp"><img src="img/margherita-pizza.png" alt="" class="utp__bg"></picture>
 				<div class="utp__container">
 					<div class="utp__body">
 						<h1 class="utp__title">Пиццерия <span>Смак</span></h1>
@@ -31,7 +63,7 @@
 						<div class="pizza-menu__slide swiper-slide">
 							<div class="pizza-menu__card">
 								<div class="pizza-menu__image">
-									<img src="@img/4sezona.jpg" alt="">
+									<picture><source srcset="img/4sezona.webp" type="image/webp"><img src="img/4sezona.jpg" alt=""></picture>
 								</div>
 								<div class="pizza-menu__bottom">
 									<h3 class="pizza-menu__item--title">Американо</h3>
@@ -49,7 +81,7 @@
 						<div class="pizza-menu__slide swiper-slide">
 							<div class="pizza-menu__card">
 								<div class="pizza-menu__image">
-									<img src="@img/sbekonom.jpg" alt="">
+									<picture><source srcset="img/sbekonom.webp" type="image/webp"><img src="img/sbekonom.jpg" alt=""></picture>
 								</div>
 								<div class="pizza-menu__bottom">
 									<h3 class="pizza-menu__item--title">Американо</h3>
@@ -67,7 +99,7 @@
 						<div class="pizza-menu__slide swiper-slide">
 							<div class="pizza-menu__card">
 								<div class="pizza-menu__image">
-									<img src="@img/klassik.jpg" alt="">
+									<picture><source srcset="img/klassik.webp" type="image/webp"><img src="img/klassik.jpg" alt=""></picture>
 								</div>
 								<div class="pizza-menu__bottom">
 									<h3 class="pizza-menu__item--title">Американо</h3>
@@ -85,7 +117,7 @@
 						<div class="pizza-menu__slide swiper-slide">
 							<div class="pizza-menu__card">
 								<div class="pizza-menu__image">
-									<img src="@img/detskaya.jpg" alt="">
+									<picture><source srcset="img/detskaya.webp" type="image/webp"><img src="img/detskaya.jpg" alt=""></picture>
 								</div>
 								<div class="pizza-menu__bottom">
 									<h3 class="pizza-menu__item--title">Американо</h3>
@@ -126,7 +158,7 @@
 							<a href="#" class="about__btn">Заказать</a>
 						</div>
 						<div class="about__col">
-							<img src="@img/about-image.png" alt="">
+							<picture><source srcset="img/about-image.webp" type="image/webp"><img src="img/about-image.png" alt=""></picture>
 						</div>
 					</div>
 				</div>
@@ -136,16 +168,16 @@
 				<div class="reviews__container">
 					<div class="reviews__body">
 						<div class="reviews__image">
-							<img src="@img/reviews-image.jpg" alt="">
+							<picture><source srcset="img/reviews-image.webp" type="image/webp"><img src="img/reviews-image.jpg" alt=""></picture>
 						</div>
 						<div class="reviews__col">
 							<div class="reviews__card">
 								<div class="reviews__star">
-									<img src="@img/star.svg" alt="">
-									<img src="@img/star.svg" alt="">
-									<img src="@img/star.svg" alt="">
-									<img src="@img/star.svg" alt="">
-									<img src="@img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
 								</div>
 								<p class="reviews__text">
 									Вчера вечером делали заказ на доставку, привезли нам вовремя. Было очень вкусно,
@@ -159,11 +191,11 @@
 
 							<div class="reviews__card">
 								<div class="reviews__star">
-									<img src="@img/star.svg" alt="">
-									<img src="@img/star.svg" alt="">
-									<img src="@img/star.svg" alt="">
-									<img src="@img/star.svg" alt="">
-									<img src="@img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
 								</div>
 								<p class="reviews__text">
 									Вчера вечером делали заказ на доставку, привезли нам вовремя. Было очень вкусно,
@@ -177,11 +209,11 @@
 
 							<div class="reviews__card">
 								<div class="reviews__star">
-									<img src="@img/star.svg" alt="">
-									<img src="@img/star.svg" alt="">
-									<img src="@img/star.svg" alt="">
-									<img src="@img/star.svg" alt="">
-									<img src="@img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
+									<img src="img/star.svg" alt="">
 								</div>
 								<p class="reviews__text">
 									Вчера вечером делали заказ на доставку, привезли нам вовремя. Было очень вкусно,
@@ -200,11 +232,11 @@
 							<div class="reviews__slide swiper-slide">
 								<div class="reviews__card">
 									<div class="reviews__star">
-										<img src="@img/star.svg" alt="">
-										<img src="@img/star.svg" alt="">
-										<img src="@img/star.svg" alt="">
-										<img src="@img/star.svg" alt="">
-										<img src="@img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
 									</div>
 									<p class="reviews__text">
 										Вчера вечером делали заказ на доставку, привезли нам вовремя. Было очень вкусно,
@@ -219,11 +251,11 @@
 							<div class="reviews__slide swiper-slide">
 								<div class="reviews__card">
 									<div class="reviews__star">
-										<img src="@img/star.svg" alt="">
-										<img src="@img/star.svg" alt="">
-										<img src="@img/star.svg" alt="">
-										<img src="@img/star.svg" alt="">
-										<img src="@img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
 									</div>
 									<p class="reviews__text">
 										Вчера вечером делали заказ на доставку, привезли нам вовремя. Было очень вкусно,
@@ -238,11 +270,11 @@
 							<div class="reviews__slide swiper-slide">
 								<div class="reviews__card">
 									<div class="reviews__star">
-										<img src="@img/star.svg" alt="">
-										<img src="@img/star.svg" alt="">
-										<img src="@img/star.svg" alt="">
-										<img src="@img/star.svg" alt="">
-										<img src="@img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
+										<img src="img/star.svg" alt="">
 									</div>
 									<p class="reviews__text">
 										Вчера вечером делали заказ на доставку, привезли нам вовремя. Было очень вкусно,
@@ -265,8 +297,7 @@
 				<div class="map__container">
 					<div class="map__content">
 						<h2 class="map__title">Контакты</h2>
-						<div class="map__social map-social">ул. Вьюжная 13 <span></span><i
-								class="fa-solid fa-chevron-right"></i>
+						<div class="map__social map-social">ул. Вьюжная 13 <span></span><i class="fa-solid fa-chevron-right"></i>
 							<div class="map-social__content">
 								<a href="tel:+79220468874" class="map-social__link">
 									Служба доставки: <span>+7 922-046-88-74</span></a>
@@ -425,20 +456,65 @@
 					</div>
 				</div>
 
-				<iframe class="map__pc" id="map_224927629" frameborder="0" width="100%" height="600px"
-					sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation">
+				<iframe class="map__pc" id="map_224927629" frameborder="0" width="100%" height="600px" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation">
 				</iframe>
 
-				<iframe class="map__mobile"
-					src="https://yandex.ru/map-widget/v1/?um=constructor%3A7097e5f89c11904dad72691df176480f466ffb1a4fffa760e295ab3d3fda20ab&amp;source=constructor"
-					width="100%" height="400" frameborder="0"></iframe>
+				<iframe class="map__mobile" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7097e5f89c11904dad72691df176480f466ffb1a4fffa760e295ab3d3fda20ab&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
 
 			</div>
 		</main>
-		@@include('html/_footer.htm',{})
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__col">
+						<h3 class="footer__title">Контакты</h3>
+						<ul class="footer__list">
+							<li><a href="tel:+73452268074">Доставка: 8 (345) 226 80 74</a></li>
+							<li>График работы: Ежедневно </li>
+							<li><a href="mailto:pizzasmak72@mail.ru">Email: pizzasmak72@mail.ru</a></li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<h3 class="footer__title">Информация</h3>
+						<ul class="footer__list">
+							<!-- <li><a href="#" data-goto="#top">Начало</a></li> -->
+							<li><a href="#menu">Меню</a></li>
+							<li><a href="#about">О нас</a></li>
+							<li><a href="#reviews">Отзывы</a></li>
+							<li><a href="#contact">Контакты</a></li>
+							<li class="footer__order"><a href="">Заказать доставку</a></li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<h3 class="footer__title">Мы в соц. сетях</h3>
+						<ul class="footer__list">
+							<li><a href="https://vk.com/pizzasmak72">Вконтакте</a></li>
+							<li><a href="https://wa.me/+79220468874">WhatsApp</a></li>
+							<li><a href="https://t.me/+79220468874">Telegram</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="author">
+			<div class="author__container">
+				<div class="author__body">
+					Сайт разработан - <a href="https://xn----7sbah6bllcobpj.xn--p1ai/" target="_blank">РА Аврора</a>
+				</div>
+			</div>
+		</div>
 	</div>
-	@@include('html/_popup.htm',{})
-	@@include('html/_js.htm',{})
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">Закрыть</button>
+				<div class="popup__text">
+					Text
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230608153202"></script>
 </body>
 
 </html>
